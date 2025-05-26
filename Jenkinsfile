@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
+                git branch: 'main', url:'https://github.com/aksyntax/devopspipe1.git'
               echo 'Publishing HTML'
                 publishHTML(target: [
                     reportDir: '.',
